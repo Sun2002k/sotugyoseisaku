@@ -39,6 +39,8 @@ public class kariplayer : MonoBehaviour
     [SerializeField] float camkakudoy; // カメラの角度を取得する
     [SerializeField] float camkakudoz; // カメラの角度を取得する
     [SerializeField] float rotateSpeed;
+    [SerializeField] Vector3 playernow;
+    [SerializeField] Vector3 cameranow;
     // オブジェクトがアクティブになったときに呼ばれるイベント
     private void OnDisable()
     {
@@ -92,9 +94,9 @@ public class kariplayer : MonoBehaviour
     void FixedUpdate()
     {
         my = transform.position.y;
-        camkakudox = cam.transform.localEulerAngles.x;
-        camkakudoy = cam.transform.localEulerAngles.y;
-        camkakudoz = cam.transform.localEulerAngles.z;
+        playernow = transform.position;
+        cameranow = new Vector3(playernow.x + 0.5f, playernow.y + 1.5f, playernow.z - 1.5f);
+        cam.transform.position = cameranow;
         // 銃弾数が0以下になったりなど最大値や最低値を越えないようにする処理
         #region 最大値最低値管理
         if (camkakudox >= 100)
@@ -257,6 +259,7 @@ public class kariplayer : MonoBehaviour
         #region カメラ移動
         var cameravec = inputCamera.ReadValue<Vector2>();
         debug = cameravec;
+        /*
         if (cameravec != new Vector2 (0, 0))
         {
             if (cameravec.x >= 0)
@@ -268,7 +271,6 @@ public class kariplayer : MonoBehaviour
                 cam.transform.RotateAround(centerObj.transform.position, Vector3.down, angle * Time.deltaTime);
             }
             
-            /*
             if (cameravec.y >= 0)
             {
                 cam.transform.Rotate(-cameravec.y, 0, 0);
@@ -277,10 +279,9 @@ public class kariplayer : MonoBehaviour
             {
                 cam.transform.Rotate(cameravec.y, 0, 0);
             }
-            */
             
             //this.transform.Rotate(0, cameravec.x, 0);
-        }
+        }*/
         #endregion
         if (Input.GetKeyDown(KeyCode.H))
         {
