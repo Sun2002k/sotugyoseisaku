@@ -268,6 +268,7 @@ public class kariplayer : MonoBehaviour
                 cam.transform.RotateAround(centerObj.transform.position, Vector3.down, angle * Time.deltaTime);
             }
             
+            /*
             if (cameravec.y >= 0)
             {
                 cam.transform.Rotate(-cameravec.y, 0, 0);
@@ -276,6 +277,7 @@ public class kariplayer : MonoBehaviour
             {
                 cam.transform.Rotate(cameravec.y, 0, 0);
             }
+            */
             
             //this.transform.Rotate(0, cameravec.x, 0);
         }
