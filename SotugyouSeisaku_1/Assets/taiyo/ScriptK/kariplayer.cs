@@ -41,6 +41,8 @@ public class kariplayer : MonoBehaviour
     [SerializeField] float rotateSpeed;
     [SerializeField] Vector3 playernow;
     [SerializeField] Vector3 cameranow;
+    [SerializeField] Quaternion playerkaiten;
+    [SerializeField] Quaternion camerakaiten;
     // オブジェクトがアクティブになったときに呼ばれるイベント
     private void OnDisable()
     {
@@ -95,8 +97,8 @@ public class kariplayer : MonoBehaviour
     {
         my = transform.position.y;
         playernow = transform.position;
-        cameranow = new Vector3(playernow.x + 0.5f, playernow.y + 1.5f, playernow.z - 1.5f);
-        cam.transform.position = cameranow;
+        playerkaiten = transform.rotation;
+
         // 銃弾数が0以下になったりなど最大値や最低値を越えないようにする処理
         #region 最大値最低値管理
         if (camkakudox >= 100)
@@ -259,6 +261,10 @@ public class kariplayer : MonoBehaviour
         #region カメラ移動
         var cameravec = inputCamera.ReadValue<Vector2>();
         debug = cameravec;
+        //cameranow = new Vector3(playernow.x + 0.5f, playernow.y + 1.5f, playernow.z - 1.5f);
+        //camerakaiten = new Quaternion(playerkaiten.x - 1f, playerkaiten.y - 1f, playerkaiten.z - 1f, 0);
+        //cam.transform.position = cameranow;
+        //cam.transform.rotation = camerakaiten;
         /*
         if (cameravec != new Vector2 (0, 0))
         {
