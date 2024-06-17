@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class Enemy_Test : MonoBehaviour
 {
     [SerializeField] float speed;
     public float rotationSpeed = 50f; // ‰ñ“]‘¬“x
