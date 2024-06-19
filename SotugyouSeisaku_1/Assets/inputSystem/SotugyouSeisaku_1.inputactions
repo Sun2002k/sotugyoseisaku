@@ -105,6 +105,17 @@
                 },
                 {
                     "name": "",
+                    "id": "1625be01-5fa7-435d-922b-cfba7f197dfb",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9a8c82f2-fd1c-4547-954f-e856110c6acf",
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",

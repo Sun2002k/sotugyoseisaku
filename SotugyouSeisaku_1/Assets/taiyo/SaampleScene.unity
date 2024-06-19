@@ -3282,6 +3282,46 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Input Mover
       m_Flags: 0
+    - m_Name: 2D Vector
+      m_Id: 32502952-54de-4ad2-8bf7-66916bf8d7e3
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 6dc2524b-a07e-415d-bc47-bcfac978ac78
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 0a6dd48f-8eac-4aee-bd7c-3f326cff6199
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 0e6a2d04-5d3d-44d6-9b76-73edc5b5f817
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 8
+    - m_Name: right
+      m_Id: efe11738-f025-48d2-b485-5b003784c5ca
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 8
     m_Flags: 0
   inputCamera:
     m_Name: Input Camera
