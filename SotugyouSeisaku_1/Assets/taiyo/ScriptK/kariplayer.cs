@@ -265,9 +265,9 @@ public class kariplayer : MonoBehaviour
         //camerakaiten = new Quaternion(playerkaiten.x - 1f, playerkaiten.y - 1f, playerkaiten.z - 1f, 0);
         //cam.transform.position = cameranow;
         //cam.transform.rotation = camerakaiten;
-        /*
         if (cameravec != new Vector2 (0, 0))
         {
+        /*
             if (cameravec.x >= 0)
             {
                 cam.transform.RotateAround(centerObj.transform.position, Vector3.up, angle * Time.deltaTime);
@@ -276,18 +276,18 @@ public class kariplayer : MonoBehaviour
             {
                 cam.transform.RotateAround(centerObj.transform.position, Vector3.down, angle * Time.deltaTime);
             }
-            
             if (cameravec.y >= 0)
             {
-                cam.transform.Rotate(-cameravec.y, 0, 0);
+                cam.transform.rotation=new Quaternion(-10f, 0, 0,100);
             }
             else if (cameravec.y <= 0)
             {
-                cam.transform.Rotate(cameravec.y, 0, 0);
+                cam.transform.rotation=new Quaternion(40f, 0, 0,100);
             }
+            */
             
             //this.transform.Rotate(0, cameravec.x, 0);
-        }*/
+        }
         #endregion
         if (Input.GetKeyDown(KeyCode.H))
         {
