@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1765310718520345575}
   - component: {fileID: 788673941545285754}
   - component: {fileID: 5331827992873922716}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 927071032}
   - component: {fileID: 927071031}
   - component: {fileID: 4438976930288809769}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WeakEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,8 +126,8 @@ Transform:
   m_GameObject: {fileID: 633668276453382409}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1, y: 1, z: 1.116}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2614603513048627110}
   - {fileID: 7237377031729148585}
@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.01
   hp: 2
+  walk: {fileID: 8300000, guid: 20ac697cf51e07843b98adee882df453, type: 3}
 --- !u!54 &927071031
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -183,11 +184,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 20ac697cf51e07843b98adee882df453, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -229,7 +230,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -281,7 +282,7 @@ GameObject:
   - component: {fileID: 5623899028046491208}
   - component: {fileID: 4254238866044383895}
   - component: {fileID: 4998482718029954131}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +380,7 @@ GameObject:
   - component: {fileID: 3418126298621568219}
   - component: {fileID: 2611935513604967469}
   - component: {fileID: 353692199719465886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +478,7 @@ GameObject:
   - component: {fileID: 7398992701708524376}
   - component: {fileID: 569804264}
   - component: {fileID: 7111731714136739995}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Search
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +552,7 @@ GameObject:
   - component: {fileID: 5162265249183005295}
   - component: {fileID: 1591521528408491650}
   - component: {fileID: 3885320249214744826}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +650,7 @@ GameObject:
   - component: {fileID: 5652643919696452637}
   - component: {fileID: 7492247723448242823}
   - component: {fileID: 3829780922692624050}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +748,7 @@ GameObject:
   - component: {fileID: 3921909745247028778}
   - component: {fileID: 8152507851599633191}
   - component: {fileID: 3794343169532494837}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +846,7 @@ GameObject:
   - component: {fileID: 8088056387651098061}
   - component: {fileID: 7113459634751914486}
   - component: {fileID: 1181074374737822561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Circle.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -943,7 +944,7 @@ GameObject:
   - component: {fileID: 3300043522523876232}
   - component: {fileID: 8259460413016490901}
   - component: {fileID: 3116761618300151140}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +1042,7 @@ GameObject:
   - component: {fileID: 3574941111326660094}
   - component: {fileID: 169730605673004451}
   - component: {fileID: 8858538764379668864}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Circle.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1139,7 +1140,7 @@ GameObject:
   - component: {fileID: 2975293046821789656}
   - component: {fileID: 8048551528177534537}
   - component: {fileID: 4969062520777374172}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

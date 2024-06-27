@@ -7,18 +7,25 @@ using UnityEngine.Animations;
 
 public class EnemyBase : MonoBehaviour
 {
-    #region 変数定義
+    #region ベクター
     Vector3 v_enemy; //敵のベクター
     Vector3 v_player; //プレイヤーのベクター
     Vector3 v_range; //敵とプレイヤーの距離
     Vector3 v_move;
+    #endregion
 
+    #region ゲームオブジェクト
     GameObject player;
 
+    #endregion
+
+    #region 変数
     [SerializeField] float speed;
     [SerializeField] protected float hp = 2;
     protected float angle = 270; // 敵が回転する角度
+    #endregion
 
+    #region 効果音
     [SerializeField] protected AudioClip walk; //音素材
     protected AudioSource audioSource;
     #endregion
@@ -98,9 +105,11 @@ public class EnemyBase : MonoBehaviour
     //プレイヤーの弾に当たった処理
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "PlayerBullet") //PlayerBulletとして仮置き
+        if(collision.gameObject.tag == "BulletR" ||
+           collision.gameObject.tag == "BulletB" || 
+           collision.gameObject.tag == "BulletY")
         {
-            hp -= 1;
+            hp --;
         }
     }
     #endregion

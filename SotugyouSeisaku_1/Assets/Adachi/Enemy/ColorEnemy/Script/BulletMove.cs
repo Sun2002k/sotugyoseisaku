@@ -7,7 +7,9 @@ using UnityEngine.UIElements;
 
 public class BulletMove : MonoBehaviour
 {
+    #region •Ï”
     [SerializeField] float speed;
+    #endregion
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class BulletMove : MonoBehaviour
     }
 
 
+    #region ŠÖ”’è‹`
     /// <summary>
     /// ‰Šúİ’è
     /// </summary>
@@ -64,4 +67,5 @@ public class BulletMove : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    #endregion
 }

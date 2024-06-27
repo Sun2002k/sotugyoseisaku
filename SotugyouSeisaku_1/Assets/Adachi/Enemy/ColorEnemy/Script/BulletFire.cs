@@ -6,16 +6,21 @@ using UnityEngine;
 
 public class BulletFire : MonoBehaviour
 {
+    #region 変数定義
     [SerializeField] float span;
     float currentTime = 0;
+    #endregion
 
+    #region ゲームオブジェクト
     [SerializeField] GameObject EnemyBullet;
     [SerializeField] GameObject Search;
     SearchPlayer serchsscript;
+    #endregion
 
+    #region 効果音
     [SerializeField] AudioClip shot;
     AudioSource audioSource;
-
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +39,7 @@ public class BulletFire : MonoBehaviour
         //Debug.Log(currentTime);
     }
 
+    #region 関数定義
     /// <summary>
     /// 初期設定
     /// </summary>
@@ -57,4 +63,5 @@ public class BulletFire : MonoBehaviour
             currentTime = 0; //0に戻す
         }
     }
+    #endregion
 }

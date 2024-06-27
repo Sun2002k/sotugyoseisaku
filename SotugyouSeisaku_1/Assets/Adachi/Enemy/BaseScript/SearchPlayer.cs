@@ -6,10 +6,12 @@ using UnityEngine;
 
 public class SearchPlayer : MonoBehaviour
 {
+    #region ゲームオブジェクト
     [HideInInspector] public bool search; //プレイヤーを見つける
 
     GameObject Enemy;
     EnemyBase enemyscript;
+    #endregion
     void Start()
     {
         StartUp();
@@ -22,6 +24,7 @@ public class SearchPlayer : MonoBehaviour
     }
 
 
+    #region 関数定義
     /// <summary>
     /// 初期設定
     /// </summary>
@@ -61,4 +64,5 @@ public class SearchPlayer : MonoBehaviour
     {
         search = false; //searchをfalseにする
     }
+    #endregion
 }

@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Bullet
+  - BulletR
+  - BulletB
+  - BulletY
   layers:
   - Default
   - TransparentFX

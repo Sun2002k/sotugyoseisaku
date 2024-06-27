@@ -7,10 +7,12 @@ using UnityEngine;
 
 public class ColorEnemy : EnemyBase
 {
-    #region 変数定義
+    #region ゲームオブジェクト
     GameObject Search;
     SearchPlayer serchsscript;
+    #endregion
 
+    #region アニメーション
     private Animator anim;
     #endregion
 
