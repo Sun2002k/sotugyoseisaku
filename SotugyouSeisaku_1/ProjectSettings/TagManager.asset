@@ -5,17 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - BulletR
-  - BulletB
-  - BulletY
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
+  - EnemyBullet
   - 
   - 
   - 

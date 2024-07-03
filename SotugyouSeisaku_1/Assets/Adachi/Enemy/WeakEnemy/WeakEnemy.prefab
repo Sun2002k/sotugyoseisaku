@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 252462559360205747}
-  - component: {fileID: 927071032}
+  - component: {fileID: 4051376794641272121}
   - component: {fileID: 927071031}
   - component: {fileID: 4438976930288809769}
   m_Layer: 3
@@ -143,7 +143,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &927071032
+--- !u!114 &4051376794641272121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,12 +152,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 633668276453382409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576df9c16a967cd429c58afdb272edbc, type: 3}
+  m_Script: {fileID: 11500000, guid: a7ed0ad531416c341b3d334cb4052ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Effect: {fileID: 7295156635016714354, guid: 22b0dfa0768ca9943837cf1789b07cfb, type: 3}
   speed: 0.01
   hp: 2
   walk: {fileID: 8300000, guid: 20ac697cf51e07843b98adee882df453, type: 3}
+  hit: {fileID: 8300000, guid: 0beaa27a97beb9449a492a3f35cd9b72, type: 3}
+  explosion: {fileID: 8300000, guid: f8d167de46eb6f740a70d132c296baae, type: 3}
 --- !u!54 &927071031
 Rigidbody:
   m_ObjectHideFlags: 0

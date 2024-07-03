@@ -16,7 +16,7 @@ public class EnemyBase : MonoBehaviour
 
     #region ゲームオブジェクト
     GameObject player;
-
+    [SerializeField] GameObject Effect;
     #endregion
 
     #region 変数
@@ -26,7 +26,9 @@ public class EnemyBase : MonoBehaviour
     #endregion
 
     #region 効果音
-    [SerializeField] protected AudioClip walk; //音素材
+    [SerializeField] protected AudioClip walk; //歩く効果音
+    [SerializeField] protected AudioClip hit; //プレイヤーの弾に当たった効果音
+    [SerializeField] protected AudioClip explosion;
     protected AudioSource audioSource;
     #endregion
 
@@ -69,6 +71,8 @@ public class EnemyBase : MonoBehaviour
         if(hp <= 0)
         {
             Destroy(gameObject);
+            Instantiate(Effect, transform.position, transform.rotation);
+            audioSource.PlayOneShot(explosion);
         }
     }
 
@@ -100,17 +104,6 @@ public class EnemyBase : MonoBehaviour
     void SeStart()
     {
         audioSource.PlayOneShot(walk);
-    }
-
-    //プレイヤーの弾に当たった処理
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "BulletR" ||
-           collision.gameObject.tag == "BulletB" || 
-           collision.gameObject.tag == "BulletY")
-        {
-            hp --;
-        }
     }
     #endregion
 }

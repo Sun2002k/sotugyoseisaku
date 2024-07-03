@@ -9,6 +9,11 @@ public class YellowEnemy : ColorEnemy
         if (collision.gameObject.tag == "BulletY")
         {
             hp--;
+            audioSource.PlayOneShot(hit);
+        }
+        else if (collision.gameObject.tag == "BulletR" || collision.gameObject.tag == "BulletB")
+        {
+            audioSource.PlayOneShot(unhit);
         }
     }
 }

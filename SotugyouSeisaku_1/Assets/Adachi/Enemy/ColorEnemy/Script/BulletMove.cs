@@ -17,7 +17,7 @@ public class BulletMove : MonoBehaviour
         StartUp();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         Bullet();
     }
@@ -39,7 +39,7 @@ public class BulletMove : MonoBehaviour
         v_player = player.transform.position; //プレイヤーの座標
 
         //プレイヤーの方へ向く処理
-        float angle = 90; // 敵が回転する角度
+        float angle = 90; // 弾が回転する角度
         float theta = Mathf.Atan2(v_player.x - v_bullet.x, v_player.z - v_bullet.z);//プレイヤーの座標と敵の座標をxとzに分けてそれぞれ計算
         float deg = -(angle - theta * Mathf.Rad2Deg);
         transform.rotation = Quaternion.Euler(new Vector3(0, deg, 0));//プレイヤーの方へ向く
@@ -53,8 +53,8 @@ public class BulletMove : MonoBehaviour
         Vector3 velocity = gameObject.transform.rotation * new Vector3(-speed, 0, 0);
         gameObject.transform.position -= velocity * Time.deltaTime;
         
-        float count = 0; count++;
-        if(count > 100)//countを越えたら自壊する
+        float count = 0; count ++;
+        if(count > 1)//countを越えたら自壊する
         {
             Destroy(gameObject);
         }

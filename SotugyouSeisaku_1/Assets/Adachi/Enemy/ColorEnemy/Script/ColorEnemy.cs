@@ -16,6 +16,10 @@ public class ColorEnemy : EnemyBase
     private Animator anim;
     #endregion
 
+    #region 効果音
+    [SerializeField] protected AudioClip unhit; //プレイヤーの弾に当たった効果音
+    #endregion
+
     override protected void Start()
     {
         base.Start();
@@ -44,6 +48,7 @@ public class ColorEnemy : EnemyBase
         Search = transform.GetChild(0).gameObject; //0で一番目の子オブジェクトになる
         serchsscript = Search.GetComponent<SearchPlayer>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     //敵が倒される処理

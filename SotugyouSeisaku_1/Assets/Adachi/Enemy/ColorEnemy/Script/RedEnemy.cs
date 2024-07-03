@@ -9,6 +9,23 @@ public class RedEnemy : ColorEnemy
         if(collision.gameObject.tag == "BulletR")
         {
             hp--;
+            audioSource.PlayOneShot(hit);
+        }
+        else if(collision.gameObject.tag == "BulletB" || collision.gameObject.tag == "BulletY")
+        {
+            audioSource.PlayOneShot(unhit);
         }
     }
+
+    #region デバッグ用
+    //void FixedUpdate()
+    //{
+    //    Debug.Log(hp);
+    //    if (Input.GetKey(KeyCode.Space))
+    //    {
+    //        hp--;
+    //        audioSource.PlayOneShot(hit);
+    //    }
+    //}
+    #endregion
 }

@@ -110,6 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766cb668af6bfd0438b17e96694255d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Effect: {fileID: 7295156635016714354, guid: 22b0dfa0768ca9943837cf1789b07cfb, type: 3}
   speed: 0.005
   hp: 4
   walk: {fileID: 8300000, guid: 353bff8d25c132e4cb552399dc86c341, type: 3}
+  hit: {fileID: 8300000, guid: 0beaa27a97beb9449a492a3f35cd9b72, type: 3}
+  explosion: {fileID: 8300000, guid: f491b1699e368594b81283fdb3818fae, type: 3}
+  unhit: {fileID: 8300000, guid: 7146cdfc026ad334da25a8b1a4dfd76b, type: 3}
